@@ -1,0 +1,53 @@
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../polices/shrikhand/shrikhand-v6-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("shrikhand"), url("../polices/shrikhand/shrikhand-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../polices/shrikhand/shrikhand-v6-latin-regular.woff2") format("woff2"), url("../polices/shrikhand/shrikhand-v6-latin-regular.woff") format("woff"), url("../polices/shrikhand/shrikhand-v6-latin-regular.ttf") format("truetype"), url("../polices/shrikhand/shrikhand-v6-latin-regular.svg#Shrikhand") format("svg");
+  /* Legacy iOS */
+}
+/* roboto-100 - latin */
+@font-face {
+  font-family: "Roboto Light";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../polices/roboto/roboto-v20-latin-100.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Light"), url("../polices/roboto/roboto-v20-latin-100.eot?#iefix") format("embedded-opentype"), url("../polices/roboto/roboto-v20-latin-100.woff2") format("woff2"), url("../polices/roboto/roboto-v20-latin-100.woff") format("woff"), url("../polices/roboto/roboto-v20-latin-100.ttf") format("truetype"), url("../polices/roboto/roboto-v20-latin-100.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../polices/roboto/roboto-v20-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto"), url("../polices/roboto/roboto-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("../polices/roboto/roboto-v20-latin-regular.woff2") format("woff2"), url("../polices/roboto/roboto-v20-latin-regular.woff") format("woff"), url("../polices/roboto/roboto-v20-latin-regular.ttf") format("truetype"), url("../polices/roboto/roboto-v20-latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../polices/roboto/roboto-v20-latin-900.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Bold"), url("../polices/roboto/roboto-v20-latin-900.eot?#iefix") format("embedded-opentype"), url("../polices/roboto/roboto-v20-latin-900.woff2") format("woff2"), url("../polices/roboto/roboto-v20-latin-900.woff") format("woff"), url("../polices/roboto/roboto-v20-latin-900.ttf") format("truetype"), url("../polices/roboto/roboto-v20-latin-900.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+h1 {
+  font-family: "Shrikhand";
+}
+
+body {
+  font-family: "Roboto";
+}
+
+img {
+  width: 300px;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
