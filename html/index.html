@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UFT8"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="../styles/css/stylesheet.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1 ">
         <title>Ohmyfood</title>
@@ -17,25 +17,25 @@
 
 
 
-        <section>
-            <div>
-                <span class="map"><i class="fa fa-map-marker" ></i></span>
-                <p>Paris, Belleville</p> <!--choix deroulant ou input recherche?-->
+        <section >
+            <div id="location">
+                <p><i class="fas fa-map-marker-alt"></i></p>
+                <p>Paris, Belleville</p>
             </div>
 
 
-            <div>
+            <div id="blurb">
                 <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <a href="#restaurant">Explorer nos restaurants</a>
+                <p>Découvrez des restaurants d'exception,<br/>électionnés par nos soins</p>
+                <div><a href="#restaurant" class="button">Explorer nos restaurants</a></div>
             </div>
 
-            <div>
+            <div id="operation">
                 <h1>Fonctionnement</h1>
                 <ol>
-                    <li><i class="fa fa-mobile" aria-hidden="true"></i> Choisissez un restaurant</li>
-                    <li><i class="fa fa-list-ul" aria-hidden="true"> Composez votre menu</i></li>
-                    <li><i class="fa fa-cutlery" aria-hidden="true"></i> Dégustez au restaurant</li>
+                    <li><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</li>
+                    <li><i class="fas fa-list-ul" aria-hidden="true"></i> Composez votre menu</li>
+                    <li><i class="fas fa-store" aria-hidden="true"></i> Dégustez au restaurant</li>
                 </ol>
             </div>
         </section>
@@ -43,52 +43,65 @@
 
         <main id="restaurant">
             <h1>Restaurant</h1>
-            <div>
+            <div id="card_warp">
 
                
-                    <div>
-                      <a href="palette_du_gout.html">   
-                    <img src="../images/restaurants/palettedugout.jpg" alt="restaurant la palette du gout"/>
-                    <p>Nouveau</p>
-                    </a>
+                    <div class="card">
+                      <div class="card_img">
+                          
+                         <a href="palette_du_gout.html">   
+                         <img src="../images/restaurants/palettedugout.jpg" alt="restaurant la palette du gout"/>
+                         <p class="new"><span>Nouveau</span> </p>
+                         </a>
+                         
+                       </div>
+                       <div class="card_text">
+                         <a href="palette_du_gout.html"><h2>La palette du goût</h2></a>
+                         <h3>Ménilmontant</h3>
+                         <div ></div>
+                      </div>
+                    </div>
+                
+                    <div class="card">
+                      <div class="card_img">
+                        <a href="note_enchantee.html">   
+                         <img src="../images/restaurants/noteenchante.jpg" alt="la note enchante"/>
+                         <p class="new"><span>Nouveau</span> </p>
+                         </a>
+                      </div>
+                      <div class="card_text">
+                       <a href="note_enchantee.html"><h2>La note enchantée</h2></a>
+                      <h3>Charonne</h3>
+                      <div> <!--ajouter le coeur--> </div>   
+                      </div>
                    </div>
-                    <a href="palette_du_gout.html"><h2>La palette du goût</h2></a>
-                    <h3>Ménilmontant</h3>
-                    <div> <!--ajouter le coeur--> </div>
-                
-                
-                
-                    <div>
-                     <a href="note_enchantee.html">   
-                    <img src="../images/restaurants/noteenchante.jpg" alt="la note enchante"/>
-                     <p>Nouveau</p>
-                     </a>
-                   </div>
-                    <a href="note_enchantee.html"><h2>La note enchantée</h2></a>
-                    <h3>Charonne</h3>
-                    <div> <!--ajouter le coeur--> </div>
-                
 
-                
-                    <div>
+                <div class="card">
+                    <div class="card_img">
                      <a href="a_la_francaise.html">   
                     <img src="../images/restaurants/alafrancaise.jpg" alt="a la francaise"/>
                     </a>
                     </div>
+                    <div class="card_text">
                      <a href="a_la_francaise.html"><h2>À la française</h2></a>
                     <h3>Cité Rouge</h3>
                     <div> <!--ajouter le coeur--> </div>
-                
+                   </div>
+                </div>
 
-                
-                    <div>
+
+                <div class="card">
+                    <div class="card_img">
                      <a href="delice_des_sens.html">   
                     <img src="../images/restaurants/delicedessens.jpg" alt="le delice des sens"/>
                     </a>
                    </div>
-                    <a href="delice_des_sens.html"><h2>Le délice des sens</h2></a>
-                    <h3>Folie-Méricourt</h3>
-                    <div> <!--ajouter le coeur--> </div>
+                   <div class="card_text"> 
+                     <a href="delice_des_sens.html"><h2>Le délice des sens</h2></a>
+                     <h3>Folie-Méricourt</h3>
+                     <div> <!--ajouter le coeur--> </div>
+                   </div>
+                </div>   
                 
             </div>
 
@@ -97,10 +110,11 @@
 
 
         <footer>
-            <p><i class="fa fa-cutlery" aria-hidden="true"></i> Proposer un restaurant</p>
-            <p><i class="fa fa-handshake-o" aria-hidden="true"></i> Devenir partenaire</p>
+            <p id="footer-title" >ohmyfood</p>
+            <p><i class="fas fa-utensils" aria-hidden="true"></i> Proposer un restaurant</p>
+            <p><i class="fas fa-handshake" aria-hidden="true"></i> Devenir partenaire</p>
             <p>Mentions légales</p>
-            <p><a href="mailto:ofmyfood_contact@gmail.com">Contact</a></p>
+            <p><a href="mailto:mailto:contact@ohmyfood.com">Contact</a></p>
 
         </footer>
         
