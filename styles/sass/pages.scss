@@ -1,3 +1,4 @@
+@import "_animation";
 @import "_component";
 @import "_layout";
 /* shrikhand-regular - latin */
@@ -58,6 +59,7 @@ body{
   font-family: "Roboto";
   width: 100%;
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -67,6 +69,4 @@ a {
   text-decoration: none;
 }
 
-
-  
 
