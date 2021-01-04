@@ -9,10 +9,10 @@
     left: 0;
     right: 0;
     background-color: black;
-    font-family: "shrikhand";
     color: white;
     z-index: 999;
     text-align: center;
+    visibility: hidden;
     opacity: 0;
     animation: loading 3s;
   
@@ -21,7 +21,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content:space-evenly;
+      justify-content:center;
       align-items: center;
       font-size: 2em;
     }
@@ -59,9 +59,15 @@
       transform: rotate(360deg); } }
   
       @keyframes loading {
-        0%   {opacity: 1;}
-        50% {opacity: 1;}
-        100% {opacity:0;} }
+        0%   {
+          visibility: visible;
+          opacity: 1;}
+        50% {
+          visibility: visible;
+          opacity: 1;}
+        100% {
+          visibility: visible;
+          opacity:0;} }
 
     /*menu slide*/
 
@@ -82,8 +88,8 @@
 .fa-heart {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
-  &:active{
-    animation:like-button 10s ease-in-out forwards ;  
+  &:hover{
+    animation:like-button 0.5s ease-in-out forwards ;  
   }
   
  }
@@ -92,6 +98,6 @@
          -webkit-text-fill-color: transparent; 
      }
      to {
-         -webkit-text-fill-color: #9356DC;
+         -webkit-text-fill-color:lin;
      }
  }
