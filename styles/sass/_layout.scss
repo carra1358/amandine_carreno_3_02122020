@@ -31,7 +31,7 @@ p {
     
    
 
-h1{
+h2{
     font-family: 'Roboto Bold';
     font-size: 1.7em;
 }
@@ -50,7 +50,7 @@ div{
 width: 100%;
 height: 18%;
 margin-top: 1.5em;
-h1{
+h2{
     font-size: 1.3em;
     margin-left: 30px ;
 }
@@ -91,7 +91,7 @@ i{
 #restaurant {
     width: 100%;
     background-color: #f6f6f6;
-h1{
+h2{
     font-size: 1.5em;
     padding-top: 1em;
     margin-left: 30px;
@@ -160,27 +160,32 @@ figure{
     border-radius: 40px 40px 0 0;
    
 
-form {
-
-    text-align: center;
-    input{
-        margin: 2em;
+#bouton {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.1em;
+        padding: 2em;
+        
         border: none;
-    }
+ 
     
 }
     
 
     h1{
-        font-size: 1.7em;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5em;
         padding-top: 30px;
-        margin-left: 0.7em;
+       
         font-family: "shrikhand";
         font-weight: normal;
         letter-spacing: 2px;
         white-space: nowrap;
         .fa-heart {
-           margin-left: 10%;
+           
+           font-size: 1.1em;
         }
     }
     h4{
@@ -215,6 +220,7 @@ form {
  $marge-box: 0.7em;
 
  .meals{
+     
      width: 90%;
      height: 25%;
      background-color: white ;
@@ -222,7 +228,8 @@ form {
      box-shadow: 0 0.2em 0.2em #939393;
      padding-left: 0.5em;
      margin-bottom: 1.5em ;
-     animation: slide 2s ease-in-out forwards;
+     display: flex;
+     animation: slide 3s ease-in-out forwards;
      h5{
          width: 100%;
          font-size: 1em;
@@ -241,15 +248,277 @@ form {
          text-overflow: ellipsis;
          white-space: nowrap;
          font-family: "roboto light";
-         font-size: 0.85em;
+         font-size: 0.75em;
      }
      p{ 
          margin: 0;
+         margin-left:1em ;
          margin-right: 1em;
          font-size: 0.85em;
      }
      }
 
+    .fa-check-circle {
+       visibility: hidden;
+       font-size: 1.5em;
+    }
+     @media (min-width:760px){
+
+        .button{
+            border-radius: 50px;
+            font-size: 1.5em;
+        }
+       
+#head_restaurant { 
+    font-size: 2em;
+    #arrow{
+        width: 40%;
+    } 
+   }
+
+        footer{
+            font-size: 2em;
+        }
+
+        main{
+            font-size: 2em;
+        }
+         
+      section{
+           #location{
+               p{
+                   font-size: 20px;
+               }
+           }
+           #blurb{
+               h2{
+                   font-size: 2.5em;
+               }
+               p{
+                   font-size: 1.5em;
+               }
+               a{
+                   font-size: 1.5em;
+               }
+           }
+           #operation{
+            h2{
+                font-size: 2.5em;
+            }
+            ol>li{
+                font-size: 2em;
+                border-radius: 30px;
+            &:before{
+                width: 50px;
+                height: 50px;
+                font-size: 1em; 
+                    left: -25px;
+            }
+            }
+           }
+           
+      }
+        
+     }
+
+     $marge-desk:15%;
+     $size-tittle:30px;
+
+    @media (min-width: 792px){
+      header{
+          display: flex;
+          justify-content: flex-start;
+          padding: 2%;
+          div{
+              margin-left: $marge-desk;
+          }
+      }
+
+      section {
+       #blurb{
+           text-align: left;
+        h2{
+            margin-left: $marge-desk;
+            font-size: $size-tittle;
+            margin-top: 4%;
+        }
+        p{
+            margin-left: $marge-desk;
+            font-size: 1em;
+        }
+        div{
+            margin-top:2%;
+            margin-bottom: 4%;
+            .button{
+                margin-left: $marge-desk;
+                font-size: 1em;
+                padding: 10px 20px; 
+                
+            }
+        }
+           
+       }
+       #operation {
+        h2 {
+            margin-left: $marge-desk ;
+            font-size: $size-tittle;
+            margin-bottom: 5%;
+        }
+        ol{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-right: $marge-desk;
+          margin-left: $marge-desk;
+          li{
+            width: 20%;
+            border-radius: 10px;
+            font-size: 1vw;
+            &::before{
+            width: 2em;
+            height: 2em;
+            left: -15px;
+            top: 25%;
+            font-size: 1em;
+            }
+          }  
+       } 
+      }   
+      } 
+
+      #restaurant{
+        .title{
+            font-size: $size-tittle;
+            margin-left: $marge-desk;
+            margin-bottom: 5%;
+        }
+        #card_warp {
+            display: flex;
+            align-items: center;
+          flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin-right: $marge-desk;
+         margin-left: $marge-desk ;
+         width: 70%;
+          .card{
+            width: 35%;
+            margin: 0;
+             margin-bottom: 5%;
+        .card_text{
+            height: 2em;
+            padding-top: 0;
+            padding-bottom: 10px;
+            .name_city ,.fa-heart, .name_resto{ 
+                font-size: 16px;
+            }
+        }
+         .card_img{
+             span{
+                 font-size: 0.5em;
+             }
+             img{
+                 height: 6em;
+             }
+         .new{
+             margin: 0;
+             span{
+                 font-size: 0.3em;
+                 padding: 0.3em;
+
+                }  
+            }
+        
+             }
+            }
+        }
+       
+    } 
+    footer{
+            
+            font-size: 1em;
+        p{
+
+            margin-left: $marge-desk;
+        }
+       
+    }
+ /*pages menu restaurant*/
+ #head_restaurant{
+    margin: 0;
+    #arrow{
+        width: 15%; 
+        margin-left: 13%;}
+
+    #logo{
+   margin-left: 15%;
+}
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    text-align: left;
+    
+    img{
+        margin-top: 2% ;
+        margin-left: $marge-desk;
+        width: 70%;
+        border-radius: 3px; } 
+    
+}
+
+#carte_restaurant{
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 15em;
+    #bouton{
+        font-size: 10px;
+    }
+    h1{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: $marge-desk;
+        font-size: $size-tittle;
+    span{
+        margin-left: 5%;
+    }
+    }
+    h4{
+        margin-left: $marge-desk;
+        font-size: 16px;
+    }
+}
+.meals_wrap{
+    margin-left: $marge-desk;
+    margin-right: $marge-desk ;
+    width: 30%;
+    .meals{
+        .fa-check-circle{
+            font-size: 0.75em;
+        }
+        .meals_descript{
+            h5{
+                font-size: 16px;
+            }
+            
+        .meals_under{
+            h6, p {
+                font-size: 14px;
+            }
+        }
+        }
+    }
+}
 
 
+}
+       
+     
+       
+       
+   
      

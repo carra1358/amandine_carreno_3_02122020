@@ -71,6 +71,40 @@
   }
 }
 /*menu slide*/
+.meals_descript {
+  width: 100%;
+}
+
+.meals_select {
+  width: 0%;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  color: #ffff;
+  animation: slide 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.meals:hover .meals_select {
+  width: 50%;
+}
+
+.meals:hover .fa-check-circle {
+  animation: tour 0.5s forwards 0.3s;
+}
+
+@keyframes tour {
+  from {
+    visibility: visible;
+    transform: rotate(0deg);
+  }
+  to {
+    visibility: visible;
+    transform: rotate(360deg);
+  }
+}
 @keyframes slide {
   from {
     opacity: 0;
@@ -83,19 +117,25 @@
 }
 /*coeur*/
 .fa-heart {
+  display: inline-block;
+  background: transparent;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px #000;
 }
 .fa-heart:hover {
-  animation: like-button 0.5s ease-in-out forwards;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  animation: like-button 1s ease-in-out forwards;
 }
 
 @keyframes like-button {
-  from {
-    -webkit-text-fill-color: transparent;
+  0% {
+    opacity: 0;
   }
-  to {
-    -webkit-text-fill-color: lin;
+  100% {
+    opacity: 1;
   }
 }
 /*boutton violet*/
@@ -105,6 +145,7 @@
   padding: 15px 35px;
   color: white;
   box-shadow: 0.1em 0.1em 0.2em #939393;
+  border-color: transparent;
 }
 .button:hover {
   background-image: linear-gradient(to top left, #9356DC, #FF79DA 90%);
@@ -147,6 +188,7 @@
   margin-bottom: 1em;
 }
 #card_warp .card .card_img {
+  background-color: white;
   position: relative;
 }
 #card_warp .card .card_img img {
@@ -204,10 +246,9 @@
   font-size: 1.3em;
   width: 20%;
   height: 100%;
-}
-#card_warp .card .card_text .card_heart i {
-  text-align: center;
-  margin-top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*pages d'acceuil*/
@@ -242,7 +283,7 @@ section #blurb {
   background-color: #f6f6f6;
   text-align: center;
 }
-section #blurb h1 {
+section #blurb h2 {
   font-family: "Roboto Bold";
   font-size: 1.7em;
 }
@@ -260,7 +301,7 @@ section #operation {
   height: 18%;
   margin-top: 1.5em;
 }
-section #operation h1 {
+section #operation h2 {
   font-size: 1.3em;
   margin-left: 30px;
 }
@@ -293,7 +334,7 @@ section #operation ol li i {
   width: 100%;
   background-color: #f6f6f6;
 }
-#restaurant h1 {
+#restaurant h2 {
   font-size: 1.5em;
   padding-top: 1em;
   margin-left: 30px;
@@ -360,24 +401,26 @@ figure img {
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
 }
-#carte_restaurant form {
+#carte_restaurant #bouton {
+  display: flex;
+  justify-content: center;
   text-align: center;
-}
-#carte_restaurant form input {
-  margin: 2em;
+  font-size: 1.1em;
+  padding: 2em;
   border: none;
 }
 #carte_restaurant h1 {
-  font-size: 1.7em;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5em;
   padding-top: 30px;
-  margin-left: 0.7em;
   font-family: "shrikhand";
   font-weight: normal;
   letter-spacing: 2px;
   white-space: nowrap;
 }
 #carte_restaurant h1 .fa-heart {
-  margin-left: 10%;
+  font-size: 1.1em;
 }
 #carte_restaurant h4 {
   font-family: "roboto light";
@@ -408,7 +451,8 @@ figure img {
   box-shadow: 0 0.2em 0.2em #939393;
   padding-left: 0.5em;
   margin-bottom: 1.5em;
-  animation: slide 2s ease-in-out forwards;
+  display: flex;
+  animation: slide 3s ease-in-out forwards;
 }
 .meals h5 {
   width: 100%;
@@ -429,14 +473,236 @@ figure img {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "roboto light";
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 .meals_under p {
   margin: 0;
+  margin-left: 1em;
   margin-right: 1em;
   font-size: 0.85em;
 }
 
+.fa-check-circle {
+  visibility: hidden;
+  font-size: 1.5em;
+}
+
+@media (min-width: 760px) {
+  .button {
+    border-radius: 50px;
+    font-size: 1.5em;
+  }
+
+  #head_restaurant {
+    font-size: 2em;
+  }
+  #head_restaurant #arrow {
+    width: 40%;
+  }
+
+  footer {
+    font-size: 2em;
+  }
+
+  main {
+    font-size: 2em;
+  }
+
+  section #location p {
+    font-size: 20px;
+  }
+  section #blurb h2 {
+    font-size: 2.5em;
+  }
+  section #blurb p {
+    font-size: 1.5em;
+  }
+  section #blurb a {
+    font-size: 1.5em;
+  }
+  section #operation h2 {
+    font-size: 2.5em;
+  }
+  section #operation ol > li {
+    font-size: 2em;
+    border-radius: 30px;
+  }
+  section #operation ol > li:before {
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+    left: -25px;
+  }
+}
+@media (min-width: 792px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2%;
+  }
+  header div {
+    margin-left: 15%;
+  }
+
+  section #blurb {
+    text-align: left;
+  }
+  section #blurb h2 {
+    margin-left: 15%;
+    font-size: 30px;
+    margin-top: 4%;
+  }
+  section #blurb p {
+    margin-left: 15%;
+    font-size: 1em;
+  }
+  section #blurb div {
+    margin-top: 2%;
+    margin-bottom: 4%;
+  }
+  section #blurb div .button {
+    margin-left: 15%;
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+  section #operation h2 {
+    margin-left: 15%;
+    font-size: 30px;
+    margin-bottom: 5%;
+  }
+  section #operation ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  section #operation ol li {
+    width: 20%;
+    border-radius: 10px;
+    font-size: 1vw;
+  }
+  section #operation ol li::before {
+    width: 2em;
+    height: 2em;
+    left: -15px;
+    top: 25%;
+    font-size: 1em;
+  }
+
+  #restaurant .title {
+    font-size: 30px;
+    margin-left: 15%;
+    margin-bottom: 5%;
+  }
+  #restaurant #card_warp {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 15%;
+    margin-left: 15%;
+    width: 70%;
+  }
+  #restaurant #card_warp .card {
+    width: 35%;
+    margin: 0;
+    margin-bottom: 5%;
+  }
+  #restaurant #card_warp .card .card_text {
+    height: 2em;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  #restaurant #card_warp .card .card_text .name_city, #restaurant #card_warp .card .card_text .fa-heart, #restaurant #card_warp .card .card_text .name_resto {
+    font-size: 16px;
+  }
+  #restaurant #card_warp .card .card_img span {
+    font-size: 0.5em;
+  }
+  #restaurant #card_warp .card .card_img img {
+    height: 6em;
+  }
+  #restaurant #card_warp .card .card_img .new {
+    margin: 0;
+  }
+  #restaurant #card_warp .card .card_img .new span {
+    font-size: 0.3em;
+    padding: 0.3em;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+  footer p {
+    margin-left: 15%;
+  }
+
+  /*pages menu restaurant*/
+  #head_restaurant {
+    margin: 0;
+  }
+  #head_restaurant #arrow {
+    width: 15%;
+    margin-left: 13%;
+  }
+  #head_restaurant #logo {
+    margin-left: 15%;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    text-align: left;
+  }
+  figure img {
+    margin-top: 2%;
+    margin-left: 15%;
+    width: 70%;
+    border-radius: 3px;
+  }
+
+  #carte_restaurant {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 15em;
+  }
+  #carte_restaurant #bouton {
+    font-size: 10px;
+  }
+  #carte_restaurant h1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15%;
+    font-size: 30px;
+  }
+  #carte_restaurant h1 span {
+    margin-left: 5%;
+  }
+  #carte_restaurant h4 {
+    margin-left: 15%;
+    font-size: 16px;
+  }
+
+  .meals_wrap {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 30%;
+  }
+  .meals_wrap .meals .fa-check-circle {
+    font-size: 0.75em;
+  }
+  .meals_wrap .meals .meals_descript h5 {
+    font-size: 16px;
+  }
+  .meals_wrap .meals .meals_descript .meals_under h6, .meals_wrap .meals .meals_descript .meals_under p {
+    font-size: 14px;
+  }
+}
 /* shrikhand-regular - latin */
 @font-face {
   font-family: "Shrikhand";
