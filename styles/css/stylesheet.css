@@ -80,15 +80,18 @@
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
   color: #ffff;
-  animation: slide 1s;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .meals:hover .meals_select {
-  width: 50%;
+  width: 35%;
+}
+
+.meals:hover .meals_descript {
+  width: 65%;
 }
 
 .meals:hover .fa-check-circle {
@@ -119,6 +122,7 @@
 .fa-heart {
   display: inline-block;
   background: transparent;
+  padding: 2%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #000;
@@ -257,7 +261,8 @@ header {
   height: 3%;
   display: flex;
   justify-content: center;
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 section {
@@ -268,15 +273,25 @@ section {
 }
 section #location {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 2.5em;
   background-color: #eaeaea;
   box-shadow: inset 0 0.2em 0.2em #cccccc;
 }
-section #location p {
-  font-size: 14px;
+section #location form .fa-map-marker-alt {
+  text-align: center;
   margin-right: 10px;
+}
+section #location form #rechercher {
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+}
+section #location form #rechercher:focus {
+  outline: none;
+  border: none;
 }
 section #blurb {
   width: 100%;
@@ -455,6 +470,9 @@ figure img {
   animation: slide 3s ease-in-out forwards;
 }
 .meals h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 100%;
   font-size: 1em;
   margin-top: 1em;
@@ -477,8 +495,8 @@ figure img {
 }
 .meals_under p {
   margin: 0;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 1.1em;
+  margin-right: 1.1em;
   font-size: 0.85em;
 }
 
@@ -534,26 +552,15 @@ figure img {
     left: -25px;
   }
 }
-@media (min-width: 792px) {
-  header {
-    display: flex;
-    justify-content: flex-start;
-    padding: 2%;
-  }
-  header div {
-    margin-left: 15%;
-  }
-
+@media (min-width: 992px) {
   section #blurb {
-    text-align: left;
+    text-align: center;
   }
   section #blurb h2 {
-    margin-left: 15%;
     font-size: 30px;
     margin-top: 4%;
   }
   section #blurb p {
-    margin-left: 15%;
     font-size: 1em;
   }
   section #blurb div {
@@ -561,24 +568,23 @@ figure img {
     margin-bottom: 4%;
   }
   section #blurb div .button {
-    margin-left: 15%;
     font-size: 1em;
     padding: 10px 20px;
   }
   section #operation h2 {
-    margin-left: 15%;
+    text-align: center;
     font-size: 30px;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
   section #operation ol {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-right: 15%;
-    margin-left: 15%;
+    justify-content: space-evenly;
+    margin-right: 3%;
+    margin-left: 3%;
   }
   section #operation ol li {
-    width: 20%;
+    width: 15%;
     border-radius: 10px;
     font-size: 1vw;
   }
@@ -592,21 +598,19 @@ figure img {
 
   #restaurant .title {
     font-size: 30px;
-    margin-left: 15%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
   #restaurant #card_warp {
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 15%;
-    margin-left: 15%;
-    width: 70%;
+    justify-content: space-around;
+    margin-right: 3%;
+    margin-left: 3%;
+    width: 90%;
   }
   #restaurant #card_warp .card {
-    width: 35%;
+    width: 23%;
     margin: 0;
     margin-bottom: 5%;
   }
@@ -633,65 +637,76 @@ figure img {
   }
 
   footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     font-size: 1em;
   }
+  footer #footer-title {
+    text-align: center;
+    width: 100%;
+  }
   footer p {
-    margin-left: 15%;
+    text-align: center;
+    width: 25%;
+    margin-left: 0;
   }
 
   /*pages menu restaurant*/
-  #head_restaurant {
-    margin: 0;
-  }
   #head_restaurant #arrow {
     width: 15%;
-    margin-left: 13%;
+    margin-left: 3%;
   }
   #head_restaurant #logo {
-    margin-left: 15%;
+    margin-left: 25%;
   }
 
   figure {
     width: 100%;
-    height: 100%;
-    background-color: #f6f6f6;
-    text-align: left;
+    height: 450px;
   }
   figure img {
-    margin-top: 2%;
-    margin-left: 15%;
-    width: 70%;
-    border-radius: 3px;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 
   #carte_restaurant {
     border-radius: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-content: center;
-    margin-top: 15em;
+    margin-top: 11em;
+    background-color: transparent;
   }
   #carte_restaurant #bouton {
     font-size: 10px;
   }
   #carte_restaurant h1 {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 15%;
+    justify-content: space-between;
+    padding: 3%;
+    margin: 0;
     font-size: 30px;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
   }
-  #carte_restaurant h1 span {
-    margin-left: 5%;
+  #carte_restaurant h1 .fa-heart {
+    -webkit-text-stroke: 1px white;
   }
   #carte_restaurant h4 {
-    margin-left: 15%;
+    margin-left: 3%;
     font-size: 16px;
   }
 
   .meals_wrap {
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 30%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    width: 23%;
   }
   .meals_wrap .meals .fa-check-circle {
     font-size: 0.75em;

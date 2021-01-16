@@ -80,17 +80,20 @@
       background-color:#99e2d0;
       border-radius: 0 20px 20px 0;
       color: #ffff;
-      animation:slide 1s;
       display:flex;
       align-items:center;
       justify-content:center;
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) ;
     
     }
     
     .meals:hover .meals_select{
-      width:50%;
+      width:35%;
       
+    }
+
+    .meals:hover .meals_descript {
+     width: 65%;
     }
     
     .meals:hover .fa-check-circle{
@@ -132,6 +135,7 @@
 .fa-heart {
   display: inline-block;
   background: transparent;
+  padding: 2%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px  #000;

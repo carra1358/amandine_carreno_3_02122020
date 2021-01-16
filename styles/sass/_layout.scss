@@ -4,7 +4,8 @@ header {
     height: 3%;
     display: flex;
     justify-content: center;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 section {
     width: 100%;
@@ -13,16 +14,32 @@ section {
     align-items: center;
 #location {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 2.5em;
     background-color: #eaeaea;
     box-shadow: inset 0 0.2em 0.2em rgb(204, 204, 204) ;
+    form {
+    
+       .fa-map-marker-alt{
+       text-align: center;
+       margin-right: 10px;
+   }
+    #rechercher{
+        
+        font-size: 1em;
+        border: none;
+        background-color: transparent;
+       
+    &:focus {
+    outline: none;
+    border: none;
+    } 
+    } 
+    }
+   
 
-p {
-    font-size: 14px;
-    margin-right: 10px ;
-}    
 }
 #blurb {
     width: 100%;
@@ -231,6 +248,9 @@ figure{
      display: flex;
      animation: slide 3s ease-in-out forwards;
      h5{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
          width: 100%;
          font-size: 1em;
          margin-top: 1em;
@@ -252,9 +272,10 @@ figure{
      }
      p{ 
          margin: 0;
-         margin-left:1em ;
-         margin-right: 1em;
+         margin-left:1.1em ;
+         margin-right: 1.1em;
          font-size: 0.85em;
+
      }
      }
 
@@ -321,36 +342,29 @@ figure{
         
      }
 
-     $marge-desk:15%;
+     $marge-desk:3%;
      $size-tittle:30px;
 
-    @media (min-width: 792px){
-      header{
-          display: flex;
-          justify-content: flex-start;
-          padding: 2%;
-          div{
-              margin-left: $marge-desk;
-          }
-      }
+    @media (min-width: 992px){
+     
 
       section {
        #blurb{
-           text-align: left;
+           text-align: center;
         h2{
-            margin-left: $marge-desk;
+            
             font-size: $size-tittle;
             margin-top: 4%;
         }
         p{
-            margin-left: $marge-desk;
+         
             font-size: 1em;
         }
         div{
             margin-top:2%;
             margin-bottom: 4%;
             .button{
-                margin-left: $marge-desk;
+              
                 font-size: 1em;
                 padding: 10px 20px; 
                 
@@ -360,18 +374,18 @@ figure{
        }
        #operation {
         h2 {
-            margin-left: $marge-desk ;
+            text-align: center;
             font-size: $size-tittle;
-            margin-bottom: 5%;
+            margin-bottom: $marge-desk;
         }
         ol{
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: space-evenly;
           margin-right: $marge-desk;
           margin-left: $marge-desk;
           li{
-            width: 20%;
+            width: 15%;
             border-radius: 10px;
             font-size: 1vw;
             &::before{
@@ -389,20 +403,19 @@ figure{
       #restaurant{
         .title{
             font-size: $size-tittle;
-            margin-left: $marge-desk;
-            margin-bottom: 5%;
+            margin-bottom: $marge-desk;
         }
         #card_warp {
             display: flex;
             align-items: center;
           flex-direction: row;
-         flex-wrap: wrap;
-         justify-content: space-between;
+        
+         justify-content: space-around;
          margin-right: $marge-desk;
          margin-left: $marge-desk ;
-         width: 70%;
+         width: 90%;
           .card{
-            width: 35%;
+            width: 23%;
             margin: 0;
              margin-bottom: 5%;
         .card_text{
@@ -435,56 +448,69 @@ figure{
        
     } 
     footer{
-            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             font-size: 1em;
+        #footer-title{
+            
+            text-align: center;
+            width: 100%;
+        }
         p{
-
-            margin-left: $marge-desk;
+       text-align: center;
+       width: 25%;
+       margin-left: 0; 
         }
        
     }
  /*pages menu restaurant*/
  #head_restaurant{
-    margin: 0;
+    
     #arrow{
         width: 15%; 
-        margin-left: 13%;}
+        margin-left: $marge-desk;}
 
     #logo{
-   margin-left: 15%;
+   margin-left: 25%;
 }
 }
 
 figure {
     width: 100%;
-    height: 100%;
-    background-color: #f6f6f6;
-    text-align: left;
+    height: 450px;
     
     img{
-        margin-top: 2% ;
-        margin-left: $marge-desk;
-        width: 70%;
-        border-radius: 3px; } 
+        object-fit: cover;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+     } 
     
 }
 
 #carte_restaurant{
     border-radius: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-content: center;
-    margin-top: 15em;
+    margin-top: 11em;
+    background-color:transparent ;
     #bouton{
         font-size: 10px;
     }
     h1{
         display: flex;
-        justify-content: flex-start;
-        margin-left: $marge-desk;
+        justify-content: space-between;
+        padding: $marge-desk;
+        margin: 0;
         font-size: $size-tittle;
-    span{
-        margin-left: 5%;
+        color: white;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.192);
+    .fa-heart{
+       -webkit-text-stroke: 1px white;
     }
     }
     h4{
@@ -495,7 +521,8 @@ figure {
 .meals_wrap{
     margin-left: $marge-desk;
     margin-right: $marge-desk ;
-    width: 30%;
+    margin-top: 5%;
+    width: 23%;
     .meals{
         .fa-check-circle{
             font-size: 0.75em;
@@ -508,6 +535,7 @@ figure {
         .meals_under{
             h6, p {
                 font-size: 14px;
+          
             }
         }
         }
