@@ -288,7 +288,7 @@ figure{
        visibility: hidden;
        font-size: 1.5em;
     }
-     @media (min-width:760px){
+     @media screen and (min-width:760px){
 
         .button{
             border-radius: 50px;
@@ -350,7 +350,7 @@ figure{
      $marge-desk:3%;
      $size-tittle:30px;
 
-    @media (min-width: 992px){
+    @media screen and (min-width: 992px){
      
 
       section {
