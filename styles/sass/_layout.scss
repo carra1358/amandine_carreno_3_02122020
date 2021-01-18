@@ -1,0 +1,558 @@
+/*pages d'acceuil*/
+header {
+    width: 100%;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+#location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5em;
+    background-color: #eaeaea;
+    box-shadow: inset 0 0.2em 0.2em rgb(204, 204, 204) ;
+    form {
+     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       .fa-map-marker-alt{
+       margin-right: -15px;
+   }
+    #rechercher{
+        text-align: center;
+        font-size: 1em;
+        border: none;
+        background-color: transparent;
+       
+    &:focus {
+    outline: none;
+    border: none;
+    } 
+    } 
+    }
+   
+
+}
+#blurb {
+    width: 100%;
+    background-color: #f6f6f6;
+    text-align: center;
+    
+   
+
+h2{
+    font-family: 'Roboto Bold';
+    font-size: 1.7em;
+}
+p{
+    font-family: "Roboto Light";
+    color: #939393;
+    font-size: 1em;  
+}
+div{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+}
+
+#operation {
+width: 100%;
+height: 18%;
+margin-top: 1.5em;
+h2{
+    font-size: 1.3em;
+    margin-left: 30px ;
+}
+ol{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+    
+li{
+    width: 80%;
+    display: block;
+    font-size: 1em ;
+    padding: 0.9em;
+    font-weight: bold;
+    background-color: #f6f6f6;
+    white-space: nowrap;
+    border-radius: 15px;
+    margin-bottom: 1.5em;
+    box-shadow: 0.2em 0.2em 0.8em #939393;
+i{
+    color: #939393;
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+
+
+
+}
+
+}
+}
+}
+
+
+#restaurant {
+    width: 100%;
+    background-color: #f6f6f6;
+h2{
+    font-size: 1.5em;
+    padding-top: 1em;
+    margin-left: 30px;
+}
+#card_warp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+}
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    color: white;
+    background-color:#353535;
+    padding-bottom: 1em ;
+#footer-title{
+    margin-top: 0;
+    padding-top: 1em ;
+    font-family: "Shrikhand";
+    font-size: 1.1em;
+}
+p{
+    margin-left: 30px;
+    font-size: 0.9em;
+}
+a{
+    color: white;
+}
+}
+
+/*restaurant*/
+
+#head_restaurant{
+display: flex;
+align-items: center;
+justify-content: center;
+#arrow{
+width: 20%;
+padding-left: 3%;
+i{ 
+    color: black;}
+}
+#logo{
+    width: 80%;
+}
+}
+
+figure{
+    margin: 0;
+    z-index: -1;
+    position: absolute;
+    height: 13%;
+    
+    img{
+        width: 100%;
+    }
+}
+
+#carte_restaurant{
+    width: 100%;
+    height: 74%;
+    margin-top: 12em;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+   
+
+#bouton {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.1em;
+        padding: 2em;
+        
+        border: none;
+ 
+    
+}
+    
+
+    h1{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5em;
+        padding-top: 30px;
+       
+        font-family: "shrikhand";
+        font-weight: normal;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        .fa-heart {
+           
+           font-size: 1.1em;
+        }
+    }
+    h4{
+      
+        font-family: "roboto light";
+        text-transform: uppercase;
+        font-size: 1.1em;
+        margin-left: 0.7em;
+    
+
+    }
+
+    h4::after{
+        display: block;
+        content: "";
+        width: 50px;
+        height: 3px;
+        background-color: #99e2d0;
+
+    }
+ 
+}
+
+.meals_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+    
+}
+
+ $marge-box: 0.7em;
+
+ .meals{
+     
+     width: 90%;
+     height: 25%;
+     background-color: white ;
+     border-radius: 20px;
+     box-shadow: 0 0.2em 0.2em #939393;
+     padding-left: 0.5em;
+     margin-bottom: 1.5em ;
+     display: flex;
+     -webkit-animation: slide 3s ease-in-out forwards;
+             animation: slide 3s ease-in-out forwards;
+     h5{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+         width: 100%;
+         font-size: 1em;
+         margin-top: 1em;
+         margin-bottom: $marge-box;
+     }
+    }        
+   .meals_under{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+   h6{
+         margin: 0;
+         margin-bottom: $marge-box;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         font-family: "roboto light";
+         font-size: 0.75em;
+     }
+     p{ 
+         margin: 0;
+         margin-left:1.1em ;
+         margin-right: 1.1em;
+         font-size: 0.85em;
+
+     }
+     }
+
+    .fa-check-circle {
+       visibility: hidden;
+       font-size: 1.5em;
+    }
+     @media (min-width:760px){
+
+        .button{
+            border-radius: 50px;
+            font-size: 1.5em;
+        }
+       
+#head_restaurant { 
+    font-size: 2em;
+    #arrow{
+        width: 40%;
+    } 
+   }
+
+        footer{
+            font-size: 2em;
+        }
+
+        main{
+            font-size: 2em;
+        }
+         
+      section{
+           #location{
+               p{
+                   font-size: 20px;
+               }
+           }
+           #blurb{
+               h2{
+                   font-size: 2.5em;
+               }
+               p{
+                   font-size: 1.5em;
+               }
+               a{
+                   font-size: 1.5em;
+               }
+           }
+           #operation{
+            h2{
+                font-size: 2.5em;
+            }
+            ol>li{
+                font-size: 2em;
+                border-radius: 30px;
+            &:before{
+                width: 50px;
+                height: 50px;
+                font-size: 1em; 
+                    left: -25px;
+            }
+            }
+           }
+           
+      }
+        
+     }
+
+     $marge-desk:3%;
+     $size-tittle:30px;
+
+    @media (min-width: 992px){
+     
+
+      section {
+       #blurb{
+           text-align: center;
+        h2{
+            
+            font-size: $size-tittle;
+            margin-top: 4%;
+        }
+        p{
+         
+            font-size: 1em;
+        }
+        div{
+            margin-top:2%;
+            margin-bottom: 4%;
+            .button{
+              
+                font-size: 1em;
+                padding: 10px 20px; 
+                
+            }
+        }
+           
+       }
+       #operation {
+        h2 {
+            text-align: center;
+            font-size: $size-tittle;
+            margin-bottom: $marge-desk;
+        }
+        ol{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin-right: $marge-desk;
+          margin-left: $marge-desk;
+          li{
+            width: 15%;
+            border-radius: 10px;
+            font-size: 1vw;
+            &::before{
+            width: 2em;
+            height: 2em;
+            left: -15px;
+            top: 25%;
+            font-size: 1em;
+            }
+          }  
+       } 
+      }   
+      } 
+
+      #restaurant{
+        .title{
+            font-size: $size-tittle;
+            margin-bottom: $marge-desk;
+        }
+        #card_warp {
+            display: flex;
+            align-items: center;
+          flex-direction: row;
+        
+         justify-content: space-around;
+         margin-right: $marge-desk;
+         margin-left: $marge-desk ;
+         width: 90%;
+          .card{
+            width: 23%;
+            margin: 0;
+             margin-bottom: 5%;
+        .card_text{
+            height: 2em;
+            padding-top: 0;
+            padding-bottom: 10px;
+            .name_city ,.fa-heart, .name_resto{ 
+                font-size: 16px;
+            }
+        }
+         .card_img{
+             span{
+                 font-size: 0.5em;
+             }
+             img{
+                 height: 6em;
+             }
+         .new{
+             margin: 0;
+             span{
+                 font-size: 0.3em;
+                 padding: 0.3em;
+
+                }  
+            }
+        
+             }
+            }
+        }
+       
+    } 
+    footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            font-size: 1em;
+        #footer-title{
+            
+            text-align: center;
+            width: 100%;
+        }
+        p{
+       text-align: center;
+       width: 25%;
+       margin-left: 0; 
+        }
+       
+    }
+ /*pages menu restaurant*/
+ #head_restaurant{
+    
+    #arrow{
+        width: 15%; 
+        margin-left: $marge-desk;}
+
+    #logo{
+   margin-left: 25%;
+}
+}
+
+figure {
+    width: 100%;
+    height: 450px;
+    
+    img{
+        -o-object-fit: cover;
+           object-fit: cover;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+     } 
+    
+}
+
+#carte_restaurant{
+    border-radius: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 11em;
+    background-color:transparent ;
+    #bouton{
+        font-size: 10px;
+    }
+    h1{
+        display: flex;
+        justify-content: space-between;
+        padding: $marge-desk;
+        margin: 0;
+        font-size: $size-tittle;
+        color: white;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.192);
+    .fa-heart{
+       -webkit-text-stroke: 1px white;
+    }
+    }
+    h4{
+        margin-left: $marge-desk;
+        font-size: 16px;
+    }
+}
+.meals_wrap{
+    margin-left: $marge-desk;
+    margin-right: $marge-desk ;
+    margin-top: 5%;
+    width: 23%;
+    .meals{
+        .fa-check-circle{
+            font-size: 0.75em;
+        }
+        .meals_descript{
+            h5{
+                font-size: 16px;
+            }
+            
+        .meals_under{
+            h6, p {
+                font-size: 14px;
+          
+            }
+        }
+        }
+    }
+}
+
+
+}
+       
+     
+       
+       
+   
+     
